@@ -14,6 +14,9 @@ local map = vim.keymap.set
 -- Map to save the file (:w)
 map("n", "<leader>w", ":w<CR>", { desc = "Save File" })
 
+-- Prevent visual paste from overwriting the yank register
+map("v", "p", '"_dP', { desc = "Paste without overwriting yank" })
+
 -- Show linting error or warnings
 -- Diagnostic Float with Lua
 vim.keymap.set("n", "gl", function()
