@@ -14,7 +14,7 @@ local highlights = {
 }
 
 M.base46 = {
-  theme = "gruvchad",
+  theme = "yoru",
   hl_override = highlights,
 
   -- hl_override = {
