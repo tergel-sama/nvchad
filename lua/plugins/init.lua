@@ -4,17 +4,7 @@ return {
   --   "yetone/avante.nvim",
   --   event = "VeryLazy",
   --   version = false, -- Never set this value to "*"! Never!
-  --   opts = {
-  --     provider = "openrouter",
-  --     vendors = {
-  --       openrouter = {
-  --         __inherited_from = "openai",
-  --         endpoint = "https://openrouter.ai/api/v1",
-  --         api_key_name = "OPENROUTER_API_KEY",
-  --         model = "deepseek/deepseek-chat-v3-0324",
-  --       },
-  --     },
-  --   },
+  --   opts = {},
   --   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   --   build = "make",
   --   -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
@@ -156,6 +146,54 @@ return {
         "sql-formatter",
         "stylua",
         "typescript-language-server",
+      },
+    },
+  },
+  -- flash plugin ench f and t
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {},
+    keys = {
+      {
+        "s",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").jump()
+        end,
+        desc = "Flash",
+      },
+      {
+        "S",
+        mode = { "n", "x", "o" },
+        function()
+          require("flash").treesitter()
+        end,
+        desc = "Flash Treesitter",
+      },
+      {
+        "r",
+        mode = "o",
+        function()
+          require("flash").remote()
+        end,
+        desc = "Remote Flash",
+      },
+      {
+        "R",
+        mode = { "o", "x" },
+        function()
+          require("flash").treesitter_search()
+        end,
+        desc = "Treesitter Search",
+      },
+      {
+        "<c-s>",
+        mode = { "c" },
+        function()
+          require("flash").toggle()
+        end,
+        desc = "Toggle Flash Search",
       },
     },
   },
