@@ -1,5 +1,6 @@
 
 - Nvchad conf
 
-- Install formatter use the Mason gofmt and goimports etc
+1. Run MasonInstallAll 
+
 

@@ -2,8 +2,18 @@ local options = {
   formatters_by_ft = {
     lua = { "stylua" },
     go = { "goimports", "gofmt" },
-    -- sql = { "sql-formatter" },
-    -- html = { "prettier" },
+    sql = { "sql_formatter" },
+  },
+
+  formatters = {
+    ["sql_formatter"] = {
+      command = "sql-formatter",
+      args = {
+        "--config",
+        [[{"language":"postgresql","keywordCase":"upper","dataTypeCase":"upper"}]],
+      },
+      stdin = true,
+    },
   },
 
   format_on_save = {
