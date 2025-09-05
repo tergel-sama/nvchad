@@ -18,7 +18,7 @@ map("n", "<leader>w", ":w<CR>", { desc = "Save File" })
 map("v", "p", '"_dP', { desc = "Paste without overwriting yank" })
 
 -- Easy exit from terminal mode
-vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
 -- Show linting error or warnings
 -- Diagnostic Float with Lua

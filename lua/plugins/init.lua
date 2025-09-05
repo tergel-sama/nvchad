@@ -146,6 +146,7 @@ return {
         "sql-formatter",
         "stylua",
         "typescript-language-server",
+        "golines",
       },
     },
   },

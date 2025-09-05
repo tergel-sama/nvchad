@@ -14,7 +14,7 @@ nvlsp.on_attach = function(_, bufnr)
   map("n", "gr", vim.lsp.buf.references, opts "Show references")
 end
 
-local servers = { "gopls", "ts_ls", "golangci_lint_ls" }
+local servers = { "gopls", "vtsls", "golangci_lint_ls", "biome" }
 
 for _, name in ipairs(servers) do
   local cfg = {

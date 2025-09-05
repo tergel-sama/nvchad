@@ -1,11 +1,16 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    go = { "goimports", "gofmt" },
+    go = { "goimports", "golines" },
     sql = { "sql_formatter" },
   },
 
   formatters = {
+    ["golines"] = {
+      command = "golines",
+      args = { "--max-len=200", "--base-formatter=gofumpt" },
+      stdin = true,
+    },
     ["sql_formatter"] = {
       command = "sql-formatter",
       args = {
