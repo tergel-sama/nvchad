@@ -99,6 +99,7 @@ return {
         -- Go
         "gopls",
         "golangci-lint-langserver",
+        "golangci-lint",
         "gofumpt",
         "golines",
 

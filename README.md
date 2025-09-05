@@ -1,11 +1,25 @@
 
 - Nvchad conf
 
-1. Run MasonInstallAll 
-
-
 ### mason
 it can run auto and it will be install all deps when startup in neovim
+
+    -- Go
+    "gopls",
+    "golangci-lint-langserver",
+    "golangci-lint",
+    "gofumpt",
+    "golines",
+
+    -- Lua
+    "lua-language-server",
+    "stylua",
+
+    -- TypeScript / JS
+    "typescript-language-server",
+
+    -- SQL
+    "sql-formatter",
 
 
 ### zshrc config
