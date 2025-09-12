@@ -8,7 +8,7 @@ local options = {
   formatters = {
     ["golines"] = {
       command = "golines",
-      args = { "--max-len=200", "--base-formatter=gofumpt" },
+      args = { "--max-len=140", "--base-formatter=gofumpt" },
       stdin = true,
     },
     ["sql_formatter"] = {
